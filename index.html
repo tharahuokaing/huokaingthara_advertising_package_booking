@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="km" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UNIVERSE HUOKAING THARA - Advertising Package Booking / កក់កញ្ចប់ពាណិជ្ជកម្ម</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Kantumruy+Pro:wght@300;400;600;700&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="universe_huokaingthara.jpg">
+</head>
+<body>
+
+    <!-- Holographic Scanline Overlay -->
+    <div id="holo-overlay"></div>
+
+    <!-- Header & Navigation -->
+    <header class="site-header">
+        <div class="logo-container">
+            <i class="fa-solid fa-calendar-check spin-icon"></i>
+            <h1>UNIVERSE HUOKAING THARA <span class="sub-title">ប្រព័ន្ធកក់កញ្ចប់ពាណិជ្ជកម្ម / Package Booking</span></h1>
+        </div>
+        <div class="controls">
+            <button id="langToggleBtn" class="control-btn">🇰🇭 / EN</button>
+            <button id="themeToggleBtn" class="control-btn"><i class="fa-solid fa-moon"></i></button>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <main class="main-container">
+
+        <div class="booking-grid">
+
+            <!-- Left Column: Step-by-Step Booking Configuration -->
+            <section class="booking-form-card">
+                <div class="header-badge">⚡ INSTANT CAMPAIGN RESERVATION</div>
+                <h2 class="km">កក់កញ្ចប់ផ្សព្វផ្សាយពាណិជ្ជកម្មរបស់អ្នក</h2>
+                <h2 class="en">Reserve Your Advertising Package</h2>
+
+                <form id="packageBookingForm" novalidate>
+
+                    <!-- Step 1: Select Package Tier -->
+                    <div class="step-block">
+                        <h3 class="step-title">
+                            <span class="step-num">01</span>
+                            <span class="km">ជ្រើសរើសកញ្ចប់សេវាកម្ម (Select Package Tier)</span>
+                            <span class="en">Choose Sponsorship Tier</span>
+                        </h3>
+
+                        <div class="tier-radio-grid">
+                            <label class="tier-option">
+                                <input type="radio" name="packageTier" value="Starter Digital Boost" data-price="250">
+                                <div class="tier-box">
+                                    <span class="t-name">Starter Digital</span>
+                                    <strong class="t-price">$250<small>/mo</small></strong>
+                                    <span class="t-reach">2M+ Views</span>
+                                </div>
+                            </label>
+
+                            <label class="tier-option">
+                                <input type="radio" name="packageTier" value="Standard Media & Feed" data-price="600">
+                                <div class="tier-box">
+                                    <span class="t-name">Standard Media</span>
+                                    <strong class="t-price">$600<small>/mo</small></strong>
+                                    <span class="t-reach">10M+ Views</span>
+                                </div>
+                            </label>
+
+                            <label class="tier-option">
+                                <input type="radio" name="packageTier" value="VIP Production & Video Roll" data-price="1500" checked>
+                                <div class="tier-box vip-border">
+                                    <span class="vip-tag">POPULAR</span>
+                                    <span class="t-name">VIP Sponsor</span>
+                                    <strong class="t-price">$1,500<small>/mo</small></strong>
+                                    <span class="t-reach">25M+ Views</span>
+                                </div>
+                            </label>
+
+                            <label class="tier-option">
+                                <input type="radio" name="packageTier" value="Global Executive Partner" data-price="3500">
+                                <div class="tier-box">
+                                    <span class="t-name">Executive Partner</span>
+                                    <strong class="t-price">$3,500<small>/mo</small></strong>
+                                    <span class="t-reach">50M+ Views</span>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Step 2: Campaign Duration & Add-ons -->
+                    <div class="step-block">
+                        <h3 class="step-title">
+                            <span class="step-num">02</span>
+                            <span class="km">រយៈពេល និងសេវាកម្មបន្ថែម (Duration & Add-Ons)</span>
+                            <span class="en">Campaign Duration & Production Add-Ons</span>
+                        </h3>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="durationMonths">
+                                    <span class="km">រយៈពេលកក់ (ខែ)</span>
+                                    <span class="en">Booking Duration</span>
+                                </label>
+                                <select id="durationMonths">
+                                    <option value="1" data-discount="0">1 Month (Standard Rate)</option>
+                                    <option value="3" data-discount="0.10" selected>3 Months (Save 10%)</option>
+                                    <option value="6" data-discount="0.15">6 Months (Save 15%)</option>
+                                    <option value="12" data-discount="0.20">12 Months Annual (Save 20%)</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="startDate">
+                                    <span class="km">កាលបរិច្ឆេទចាប់ផ្តើមផ្សាយ *</span>
+                                    <span class="en">Campaign Launch Date *</span>
+                                </label>
+                                <input type="date" id="startDate" required>
+                                <small class="error-msg"></small>
+                            </div>
+                        </div>
+
+                        <div class="addons-list">
+                            <label class="addon-item">
+                                <input type="checkbox" class="addon-cb" value="Custom Commercial Video Shoot (+$400)" data-cost="400">
+                                <div class="addon-info">
+                                    <strong class="km">ផលិតវីដេអូពាណិជ្ជកម្មពិសេស (+$400)</strong>
+                                    <strong class="en">Custom Commercial Video Shoot (+$400 one-time)</strong>
+                                    <span>Filmed & edited by UNIVERSE HUOKAING THARA Production</span>
+                                </div>
+                            </label>
+
+                            <label class="addon-item">
+                                <input type="checkbox" class="addon-cb" value="Ghost Stories Khmer Narrator Shoutout (+$250)" data-cost="250">
+                                <div class="addon-info">
+                                    <strong class="km">ការណែនាំផលិតផលក្នុងកម្មវិធី និទានរឿងខ្មោចខ្មែរ (+$250)</strong>
+                                    <strong class="en">Ghost Stories Khmer Narrator Feature (+$250 one-time)</strong>
+                                    <span>Dedicated brand integration narrated by Mr. Chorn Rothanak</span>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Step 3: Client & Payment Method -->
+                    <div class="step-block">
+                        <h3 class="step-title">
+                            <span class="step-num">03</span>
+                            <span class="km">ព័ត៌មានអតិថិជន និងការទូទាត់ (Client & Payment)</span>
+                            <span class="en">Brand Details & Payment Channel</span>
+                        </h3>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="brandName">
+                                    <span class="km">ឈ្មោះក្រុមហ៊ុន / ម៉ាកយីហោ *</span>
+                                    <span class="en">Brand / Company Name *</span>
+                                </label>
+                                <input type="text" id="brandName" required placeholder="e.g., Golden Dragon Group">
+                                <small class="error-msg"></small>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="contactPerson">
+                                    <span class="km">ឈ្មោះអ្នកតំណាង *</span>
+                                    <span class="en">Contact Representative *</span>
+                                </label>
+                                <input type="text" id="contactPerson" required placeholder="e.g., Chan Vuthy">
+                                <small class="error-msg"></small>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="contactPhone">
+                                    <span class="km">លេខទូរស័ព្ទ / Telegram *</span>
+                                    <span class="en">Phone / Telegram *</span>
+                                </label>
+                                <input type="text" id="contactPhone" required placeholder="e.g., +855 12 888 999">
+                                <small class="error-msg"></small>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="paymentGateway">
+                                    <span class="km">ជម្រើសប្រព័ន្ធទូទាត់</span>
+                                    <span class="en">Preferred Payment Method</span>
+                                </label>
+                                <select id="paymentGateway">
+                                    <option value="Bank 1 (UNIVERSE Digital Pay)">💳 Bank 1 (UNIVERSE Digital Pay)</option>
+                                    <option value="Bank 2 (Reserve Corporate Transfer)">🏦 Bank 2 (Reserve Corporate Transfer)</option>
+                                    <option value="KHQR / ABA / ACLEDA">📱 KHQR / Local Bank Transfer</option>
+                                    <option value="Invoice / Corporate Wire">📄 Official Corporate Invoice</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="confirm-btn">
+                        <i class="fa-solid fa-lock"></i>
+                        <span class="km">បញ្ជាក់ការកក់កញ្ចប់ពាណិជ្ជកម្មឥឡូវនេះ</span>
+                        <span class="en">Confirm Package Reservation</span>
+                    </button>
+
+                </form>
+            </section>
+
+            <!-- Right Column: Sticky Live Order Summary -->
+            <aside class="summary-sidebar">
+                <div class="summary-card">
+                    <h3 class="summary-heading">
+                        <i class="fa-solid fa-receipt"></i>
+                        <span class="km">សង្ខេបការកក់សេវាកម្ម</span>
+                        <span class="en">Booking Summary</span>
+                    </h3>
+
+                    <div class="summary-row">
+                        <span>Selected Tier:</span>
+                        <strong id="sumTierName">VIP Production & Video Roll</strong>
+                    </div>
+
+                    <div class="summary-row">
+                        <span>Monthly Base Rate:</span>
+                        <span id="sumBaseRate">$1,500.00</span>
+                    </div>
+
+                    <div class="summary-row">
+                        <span>Duration:</span>
+                        <span id="sumDuration">3 Months</span>
+                    </div>
+
+                    <div class="summary-row discount-row">
+                        <span>Multi-Month Discount:</span>
+                        <span id="sumDiscount">-$450.00 (10%)</span>
+                    </div>
+
+                    <div class="summary-row">
+                        <span>Production Add-Ons:</span>
+                        <span id="sumAddons">$0.00</span>
+                    </div>
+
+                    <hr class="sum-divider">
+
+                    <div class="summary-total">
+                        <div>
+                            <strong class="km">ទឹកប្រាក់សរុបប៉ាន់ស្មាន</strong>
+                            <strong class="en">Estimated Total</strong>
+                        </div>
+                        <div class="total-amount" id="sumTotal">$4,050.00</div>
+                    </div>
+
+                    <div class="reach-badge">
+                        <i class="fa-solid fa-eye"></i>
+                        <span>Est. Campaign Reach: <strong id="sumReach">75.0M+ Views</strong></span>
+                    </div>
+
+                    <div class="governance-note">
+                        <i class="fa-solid fa-shield-check"></i>
+                        <span>Verified & protected under <strong>UNIVERSE HUOKAING THARA</strong> Cybersecurity & Marketing Division.</span>
+                    </div>
+                </div>
+            </aside>
+
+        </div>
+
+    </main>
+
+    <!-- Booking Confirmation Voucher Modal -->
+    <div id="voucherModal" class="modal-backdrop hidden">
+        <div class="modal-card">
+            <div class="voucher-top">
+                <i class="fa-solid fa-circle-check"></i>
+                <h3 class="km">ការកក់កញ្ចប់ពាណិជ្ជកម្មបានជោគជ័យ!</h3>
+                <h3 class="en">Package Reservation Confirmed!</h3>
+            </div>
+            <div id="voucherDetails" class="voucher-body"></div>
+            <button id="closeVoucherBtn" class="control-btn full-width">
+                <span class="km">រួចរាល់ / បិទផ្ទាំង</span> • <span class="en">Done / Close</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <p>&copy; 2026 UNIVERSE HUOKAING THARA Group. All Rights Reserved. / រក្សាសិទ្ធិគ្រប់យ៉ាង។</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
